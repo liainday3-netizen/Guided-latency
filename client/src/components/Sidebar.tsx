@@ -1,11 +1,12 @@
 import { Link, useLocation } from "wouter";
-import { Activity, Cpu, Layers, Server, ShieldCheck, Zap } from "lucide-react";
+import { Activity, Cpu, Layers, Server, ShieldCheck, Zap, Wallet } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { href: "/", label: "Overview", icon: Activity },
   { href: "/architecture", label: "Architecture Components", icon: Layers },
   { href: "/technologies", label: "Key Technologies", icon: Cpu },
+  { href: "/on-chain", label: "On-Chain & Capital", icon: Wallet },
   { href: "/best-practices", label: "Best Practices", icon: ShieldCheck },
 ];
 

@@ -8,6 +8,7 @@ import { Sidebar } from "@/components/Sidebar";
 import Home from "@/pages/Home";
 import Architecture from "@/pages/Architecture";
 import Technologies from "@/pages/Technologies";
+import OnChainImplementation from "@/pages/OnChainImplementation";
 import BestPractices from "@/pages/BestPractices";
 import NotFound from "@/pages/not-found";
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/architecture" component={Architecture} />
       <Route path="/technologies" component={Technologies} />
+      <Route path="/on-chain" component={OnChainImplementation} />
       <Route path="/best-practices" component={BestPractices} />
       <Route component={NotFound} />
     </Switch>
