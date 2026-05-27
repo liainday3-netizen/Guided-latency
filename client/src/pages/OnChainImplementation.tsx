@@ -1,7 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wallet, Shield, Layers, Coins, Lock, Network, CornerRightUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { Wallet, Shield, Layers, Coins, Lock, Network, CornerRightUp, Fingerprint, Eye } from "lucide-react";
 
 export default function OnChainImplementation() {
   return (
@@ -9,9 +8,22 @@ export default function OnChainImplementation() {
       <header className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Capital Allocation & On-Chain Execution</h1>
         <p className="text-lg text-muted-foreground">
-          Understanding where to park capital and how the technological stack implements securing, moving, and trading assets natively on the blockchain.
+          Understanding where to park capital and how the technological stack implements securing, moving, and trading assets natively on the blockchain while maintaining verifiable trust.
         </p>
       </header>
+
+      {/* Trust Highlight */}
+      <div className="glass-panel p-6 rounded-xl border border-primary/30 bg-primary/5 mt-8 flex flex-col md:flex-row gap-6 items-center">
+         <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+           <Eye className="h-8 w-8 text-primary" />
+         </div>
+         <div>
+            <h3 className="text-xl font-bold font-mono text-primary mb-2">Absolute Transparency Protocol</h3>
+            <p className="text-sm text-muted-foreground">
+              Every deposit and withdrawal is tracked on public ledgers. We employ independent oracle networks (like Chainlink) and publish regular cryptographic attestations so users can verify that their funds are segregated and untouched by internal operations.
+            </p>
+         </div>
+      </div>
 
       {/* Capital Flow Diagram */}
       <div className="glass-panel p-6 rounded-xl border border-border/50 relative overflow-hidden mt-8">
@@ -23,7 +35,7 @@ export default function OnChainImplementation() {
         
         <div className="flex flex-col md:flex-row items-stretch justify-between gap-4 relative z-10">
           {/* Step 1 */}
-          <div className="flex-1 glass-panel p-4 rounded-lg border border-primary/20 bg-card">
+          <div className="flex-1 glass-panel p-4 rounded-lg border border-primary/20 bg-card hover-elevate">
             <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mb-3">
               <Wallet className="h-5 w-5 text-primary" />
             </div>
@@ -36,7 +48,7 @@ export default function OnChainImplementation() {
           </div>
 
           {/* Step 2 */}
-          <div className="flex-1 glass-panel p-4 rounded-lg border border-purple-500/20 bg-card">
+          <div className="flex-1 glass-panel p-4 rounded-lg border border-purple-500/20 bg-card hover-elevate">
             <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
               <Network className="h-5 w-5 text-purple-400" />
             </div>
@@ -49,7 +61,7 @@ export default function OnChainImplementation() {
           </div>
 
           {/* Step 3 */}
-          <div className="flex-1 glass-panel p-4 rounded-lg border border-emerald-500/20 bg-card">
+          <div className="flex-1 glass-panel p-4 rounded-lg border border-emerald-500/20 bg-card hover-elevate">
             <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center mb-3">
               <Lock className="h-5 w-5 text-emerald-400" />
             </div>
@@ -67,7 +79,7 @@ export default function OnChainImplementation() {
             On-Chain Tech Stack
           </h2>
 
-          <Card className="glass-panel border-border/50">
+          <Card className="glass-panel border-border/50 hover:border-blue-500/30 transition-colors">
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-bold flex items-center justify-between">
                 Layer 1 (Settlement)
@@ -84,7 +96,7 @@ export default function OnChainImplementation() {
             </CardContent>
           </Card>
 
-          <Card className="glass-panel border-border/50">
+          <Card className="glass-panel border-border/50 hover:border-purple-500/30 transition-colors">
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-bold flex items-center justify-between">
                 Layer 2 (Execution)
@@ -101,7 +113,7 @@ export default function OnChainImplementation() {
             </CardContent>
           </Card>
 
-          <Card className="glass-panel border-border/50">
+          <Card className="glass-panel border-border/50 hover:border-orange-500/30 transition-colors">
             <CardHeader className="pb-2">
               <CardTitle className="text-base font-bold flex items-center justify-between">
                 Wallet Infra (Security)
@@ -112,8 +124,9 @@ export default function OnChainImplementation() {
               <p className="text-sm text-muted-foreground mb-3">
                 Private keys are never held in one piece. Multi-Party Computation (MPC) divides keys into shares distributed across servers to eliminate single points of failure.
               </p>
-              <div className="text-xs font-mono bg-background/50 p-2 rounded border border-border">
-                <span className="text-emerald-400">Implementation:</span> ECDSA/EdDSA Threshold Signature Schemes.
+              <div className="text-xs font-mono bg-background/50 p-2 rounded border border-border flex items-center gap-2">
+                <Fingerprint className="h-3 w-3 text-orange-400" />
+                <span><span className="text-emerald-400">Implementation:</span> ECDSA/EdDSA Threshold Signature Schemes.</span>
               </div>
             </CardContent>
           </Card>
