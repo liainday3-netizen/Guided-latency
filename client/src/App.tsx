@@ -10,12 +10,14 @@ import Architecture from "@/pages/Architecture";
 import Technologies from "@/pages/Technologies";
 import OnChainImplementation from "@/pages/OnChainImplementation";
 import BestPractices from "@/pages/BestPractices";
+import AIArchitect from "@/pages/AIArchitect";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/ai-architect" component={AIArchitect} />
       <Route path="/architecture" component={Architecture} />
       <Route path="/technologies" component={Technologies} />
       <Route path="/on-chain" component={OnChainImplementation} />

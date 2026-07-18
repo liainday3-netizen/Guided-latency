@@ -1,9 +1,10 @@
 import { Link, useLocation } from "wouter";
-import { Activity, Cpu, Layers, Server, ShieldCheck, Zap, Wallet } from "lucide-react";
+import { Activity, Cpu, Layers, Server, ShieldCheck, Zap, Wallet, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { href: "/", label: "Overview", icon: Activity },
+  { href: "/ai-architect", label: "AI Builder", icon: Sparkles },
   { href: "/architecture", label: "Architecture Components", icon: Layers },
   { href: "/technologies", label: "Key Technologies", icon: Cpu },
   { href: "/on-chain", label: "On-Chain & Capital", icon: Wallet },
