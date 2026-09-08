@@ -248,7 +248,7 @@ class MatchingEngine {
     const book = this.books.get(symbol)!;
     const filter = (map: Map<number, Order[]>) => {
       for (const [price, orders] of map) {
-        const live = orders.filter((o) => o.userId !== "MARKET_MAKER");
+        const live = orders.filter((o: Order) => o.userId !== "MARKET_MAKER");
         if (live.length === 0) map.delete(price);
         else map.set(price, live);
       }

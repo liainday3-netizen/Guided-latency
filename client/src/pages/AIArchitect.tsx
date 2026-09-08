@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Bot, Sparkles, Server, Cpu, Database, Network, ShieldCheck, CheckCircle2, ArrowRight, RefreshCw } from "lucide-react";
+import { Bot, Sparkles, Server, Cpu, Database, Network, ShieldCheck, CheckCircle2, ArrowRight, RefreshCw, Zap, Cloud, Layers } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
@@ -218,6 +218,3 @@ export default function AIArchitect() {
     </div>
   );
 }
-
-// Importing missed icons
-import { Cloud, Zap } from "lucide-react";

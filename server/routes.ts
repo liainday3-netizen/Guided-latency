@@ -238,7 +238,7 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
   });
 
   app.delete("/api/orders/:id", requireAuth, (req: Request, res: Response) => {
-    const order = matchingEngine.cancelOrder(req.params.id, req.user!.id);
+    const order = matchingEngine.cancelOrder(String(req.params.id), req.user!.id);
     if (!order) return res.status(404).json({ message: "Order not found or already closed" });
     res.json({ order, balances: storage.getBalances(req.user!.id) });
   });
